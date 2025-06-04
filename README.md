@@ -27,44 +27,66 @@ It showcases how to:
 
 ---
 
-📁 Project Structure Description
+## 📁 Project Structure
 
-This repository is organized into multiple components, each responsible for a specific part of the deduplication and linkage pipeline:
-	•	dataset/
-This folder contains all the input data used in the project.
-	•	primary.csv holds the main records that require deduplication.
-	•	alternate.csv contains alternate names or variants that need to be linked back to the primary entities.
-	•	test_01.xlsx is a general test set for linkage evaluation.
-	•	test_02.xlsx contains eight separate sheets, each simulating a specific type of name corruption or variation (e.g., swapped characters, missing spaces, character omissions). These are used to assess the robustness of different linkage methods.
-	•	output/
-This directory stores the results of deduplication and linkage tasks.
-It includes CSV files for matched pairs, similarity scores, and prediction outputs for each test case.
-For example, results like test01_links.csv and test02_sheet4_links.csv are generated here.
-These files are suitable for further analysis or submission.
-	•	picture/
-This folder contains visual outputs such as precision-recall curves, confusion matrices, and network graph plots.
-These visualizations help compare the performance of different models and methods on each test scenario.
-Each image corresponds to one test set or method configuration.
-	•	duplicate_recordlinkage.py
-A script that performs deduplication on the primary dataset using classic record linkage techniques.
-It uses the recordlinkage library with indexing, blocking, and comparison strategies such as Levenshtein and rule-based filters.
-	•	duplicate_transformer.py
-A deduplication script based on Transformer embeddings.
-It uses the LinkTransformer framework to encode names, apply vector similarity, and identify duplicates with semantic similarity.
-	•	link.py
-This script performs Transformer-based linking between datasets.
-It uses a two-stage pipeline:
-	1.	A Siamese model generates compact embeddings for fast retrieval using FAISS (as a coarse filter).
-	2.	A Transformer (e.g., MiniLM) computes fine-grained semantic similarity.
-This script is used to link test_01 and test02’s sheet7 and sheet8 to the primary dataset.
-	•	match.py
-A traditional linkage method using multiple string similarity algorithms: Levenshtein distance, Jaccard similarity, and Python’s SequenceMatcher.
-This script is used specifically for test_02 sheets 1 and 3, which involve character permutations or token-level changes.
-	•	match_02.py
-This script uses alternative traditional methods including character frequency matching and n-gram similarity, which are effective for handling heavily distorted or noisy inputs (e.g., OCR errors).
-It is applied to test_02 sheets 2, 4, 5, and 6.
+This repository is structured into clear modules for data input, model execution, and output analysis:
 
-Each script is modular and can be run independently by specifying the corresponding input data and configuration parameters. Results from all scripts are saved into output/, and optional visualizations are saved to picture/.
+### 🔸 `dataset/`
+
+Contains all the input data used in this project:
+- `primary.csv` — Main record table requiring **deduplication**.
+- `alternate.csv` — Alternate name variants to be **linked** back to the primary table.
+- `test_01.xlsx` — General-purpose test set for evaluating linkage accuracy.
+- `test_02.xlsx` — A specialized test set containing **8 sheets**, each simulating a different name distortion type (e.g., missing characters, swapped tokens, spacing noise, or OCR-like corruptions).
+
+### 🔸 `output/`
+
+Holds all **deduplication and linkage result files**, including:
+- CSVs of predicted matches with scores, such as `test01_links.csv` or `test02_sheet4_links.csv`.
+- These results are used to compute precision, recall, and false positive/negative rates.
+- HTML or JSON logs can also be saved here depending on evaluation script extensions.
+
+### 🔸 `picture/`
+
+Contains **visualizations** of model results:
+- Precision-Recall curves
+- Confusion matrices
+- Clustering graphs or similarity distributions
+These images are generated to support reporting, debugging, or academic paper figures.
+
+### 🔸 `duplicate_recordlinkage.py`
+
+Performs **record deduplication** on `primary.csv` using classic methods from the `recordlinkage` library:
+- Includes blocking, indexing, and comparisons like Levenshtein distance and rule-based similarity.
+
+### 🔸 `duplicate_transformer.py`
+
+Uses **Transformer-based embeddings** to deduplicate the primary table:
+- Based on [LinkTransformer](https://linktransformer.github.io/), leveraging pretrained models (e.g., MiniLM).
+- Employs vector similarity (cosine, FAISS) to detect semantic duplicates.
+
+### 🔸 `link.py`
+
+A Transformer-based **entity linking pipeline**:
+- Used for `test_01` and `test_02` sheets **7 and 8**.
+- First applies a **Siamese model** for approximate filtering (FAISS), then uses a **Transformer** for fine-grained similarity scoring.
+- Designed for efficiency and scalability on large datasets.
+
+### 🔸 `match.py`
+
+A traditional string similarity linkage script:
+- Applied to `test_02` sheets **1 and 3**.
+- Implements algorithms such as **Levenshtein**, **Jaccard**, and **SequenceMatcher** to compare test and primary names.
+
+### 🔸 `match_02.py`
+
+Alternative rule-based linkage for challenging noisy variants:
+- Used for `test_02` sheets **2, 4, 5, and 6**.
+- Applies **character frequency** analysis and **n-gram overlap** techniques, which perform better on corruptions like spacing loss or OCR noise.
+
+---
+
+Each script can be run independently with configurable parameters. All results will be saved to the `output/` folder, and optional figures will be saved in the `picture/` folder.
 
 ---
 
