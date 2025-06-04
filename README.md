@@ -45,6 +45,9 @@ Holds all **deduplication and linkage result files**, including:
 - CSVs of predicted matches with scores, such as `test01_links.csv` or `test02_sheet4_links.csv`.
 - These results are used to compute precision, recall, and false positive/negative rates.
 - HTML or JSON logs can also be saved here depending on evaluation script extensions.
+- deduplicated_primary.csv is the deduplicated primary file
+- Among them, the main file is the CSV file after deduplication and concatenation of the primary and alternate links.
+  
 
 ### 🔸 `picture/`
 
