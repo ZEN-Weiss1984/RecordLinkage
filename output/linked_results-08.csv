@@ -1,0 +1,7 @@
+ID_x,NAME_x,NAME_clean_x,id_lt_x,ID_y,NAME_y,NAME_clean_y,id_lt_y,score,exact_match,name_variations_match,NAME1,NAME2,TYPE,ID,NAME1_clean,NAME2_clean
+0,ISMAIL ABU MOHAMMED,ismail abu mohammed,973,9595,"ISMAIL, Mohammed","ismail, mohammed",10725,0.9193684,False,False,"AL-FAQIH, Abd al-Rahman","ALBASHIR, Mohammed",I,9595,"al-faqih, abd al-rahman","albashir, mohammed"
+0,ISMAIL ABU MOHAMMED,ismail abu mohammed,973,9595,"ISMAIL, Mohammed","ismail, mohammed",10725,0.9193684,False,False,"AL-FAQIH, Abd al-Rahman","AL-BASHIR, Muhammad",I,9595,"al-faqih, abd al-rahman","al-bashir, muhammad"
+0,ISMAIL ABU MOHAMMED,ismail abu mohammed,973,9595,"ISMAIL, Mohammed","ismail, mohammed",10725,0.9193684,False,False,"AL-FAQIH, Abd al-Rahman","AL-FAQI, Bashir Mohammed Ibrahim",I,9595,"al-faqih, abd al-rahman","al-faqi, bashir mohammed ibrahim"
+0,ISMAIL ABU MOHAMMED,ismail abu mohammed,973,9595,"ISMAIL, Mohammed","ismail, mohammed",10725,0.9193684,False,False,"AL-FAQIH, Abd al-Rahman","ISMAIL, Mohammed",I,9595,"al-faqih, abd al-rahman","ismail, mohammed"
+0,ISMAIL ABU MOHAMMED,ismail abu mohammed,973,9595,"ISMAIL, Mohammed","ismail, mohammed",10725,0.9193684,False,False,"AL-FAQIH, Abd al-Rahman","AL-KHATAB, Abd  Al Rahman",I,9595,"al-faqih, abd al-rahman","al-khatab, abd al rahman"
+0,ISMAIL ABU MOHAMMED,ismail abu mohammed,973,9595,"ISMAIL, Mohammed","ismail, mohammed",10725,0.9193684,False,False,"AL-FAQIH, Abd al-Rahman","MOHAMMED, Al-Basher",I,9595,"al-faqih, abd al-rahman","mohammed, al-basher"
