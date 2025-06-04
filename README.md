@@ -111,19 +111,27 @@ python duplicate_transformer.py --in data/primary.csv --model all-MiniLM-L6-v2
 # 5.  Link alternate records (sheet 2 example)
 python match_02.py --sheet 2 --in data/test02.xlsx --out results/sheet2_links.csv
 
-## 📊 Output Artefacts
-	•	CSV files in output/ contain matched IDs & similarity scores.
-	•	HTML reports summarise precision / recall and error examples.
-	•	PNG/SVG plots live in picture/ for quick drop-into slides.
+```bash
 
 ## 📖 Reference
 
-Arora, A., & Dell, M. (2024). LinkTransformer: A Unified Package for Record Linkage with Transformer Language Models. Proceedings of ACL 2024.
-https://linktransformer.github.io/  ￼
+If you use this project or any of its components in academic work, please consider citing the following paper:
 
-If you use this repository or LinkTransformer in academic work, please cite the paper above.
+> Arora, A., & Dell, M. (2024).  
+> **LinkTransformer: A Unified Package for Record Linkage with Transformer Language Models**.  
+> *Proceedings of ACL 2024*.  
+> [https://linktransformer.github.io/](https://linktransformer.github.io/)
 
-⸻
+BibTeX citation:
+```bibtex
+@inproceedings{arora2024linktransformer,
+  title     = {LinkTransformer: A Unified Package for Record Linkage with Transformer Language Models},
+  author    = {Arora, A. and Dell, M.},
+  booktitle = {Proceedings of ACL 2024},
+  year      = {2024},
+  url       = {https://linktransformer.github.io/}
+}
+
 
 ## 🤝 Contributing
 
