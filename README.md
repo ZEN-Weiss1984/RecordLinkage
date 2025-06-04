@@ -111,7 +111,7 @@ python duplicate_transformer.py --in data/primary.csv --model all-MiniLM-L6-v2
 # 5.  Link alternate records (sheet 2 example)
 python match_02.py --sheet 2 --in data/test02.xlsx --out results/sheet2_links.csv
 
-```bash
+---
 
 ## 📖 Reference
 
