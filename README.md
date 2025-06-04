@@ -84,7 +84,6 @@ Alternative rule-based linkage for challenging noisy variants:
 - Used for `test_02` sheets **2, 4, 5, and 6**.
 - Applies **character frequency** analysis and **n-gram overlap** techniques, which perform better on corruptions like spacing loss or OCR noise.
 
----
 
 Each script can be run independently with configurable parameters. All results will be saved to the `output/` folder, and optional figures will be saved in the `picture/` folder.
 
