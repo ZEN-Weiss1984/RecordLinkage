@@ -135,4 +135,9 @@ BibTeX citation:
 
 ## 🤝 Contributing
 
-Issues and pull requests are warmly welcomed! For substantial changes, please open a discussion first so we can align on design.
+Issues and pull requests are warmly welcomed!  
+For substantial changes, please open a discussion first so we can align on design and expectations.
+
+If you have any questions, feedback, or collaboration ideas, feel free to contact us:
+
+- 📧 Email: [2022141520147@stu.scu.edu.cn](mailto:2022141520147@stu.scu.edu.cn)
