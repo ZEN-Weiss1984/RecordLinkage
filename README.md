@@ -109,7 +109,8 @@ python duplicate_recordlinkage.py --in data/primary.csv --out results/dup_rl.csv
 python duplicate_transformer.py --in data/primary.csv --model all-MiniLM-L6-v2
 
 # 5.  Link alternate records (sheet 2 example)
-python match_02.py --sheet 2 --in data/test02.xlsx --out results/sheet2_links.csv
+python match_02.py
+#It is necessary to change the input and output file paths and file names within the file.
 
 ```
 
