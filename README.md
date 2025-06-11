@@ -96,8 +96,8 @@ Each script can be run independently with configurable parameters. All results w
 
 ```bash
 # 1.  Clone
-git clone https://github.com/<YOUR-ORG>/<YOUR-REPO>.git
-cd <YOUR-REPO>
+git clone https://github.com/ZEN-Weiss1984/RecordLinkage.git
+cd RecordLinkage
 
 # 2.  Install dependencies
 pip install -r requirements.txt   # Python 3.8+
